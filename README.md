@@ -70,10 +70,11 @@ Make sure you have installed:
 
 ###
 
-🚀 Step-by-Step Reproducibility
+🚀Reproducibility
 1️⃣ Clone the repository
 
 git clone https://github.com/revolver3090/weather-pipeline.git
+
 cd weather-pipeline
 
 2️⃣ Configure environment
@@ -88,22 +89,28 @@ Place your file:
 keys/key.json
 
 4️⃣ Provision infrastructure (Terraform)
+
 cd terraform
+
 terraform init
+
 terraform apply
 
 This will create:
 
 Dataset: weather_data
-Tables:
-raw_weather
+
+Tables: raw_weather
 clean_weather
 
 5️⃣ Run Airflow
+
 cd ..
+
 docker compose up
 
-Wait ~1–2 minutes.
+
+Wait 1–2 minutes.
 
 Open:
 
@@ -114,19 +121,29 @@ http://localhost:8080
 In Airflow UI:
 
 Conn Id: google_cloud_default
+
 Conn Type: Google Cloud
+
 Project Id: your GCP project ID
+
 Keyfile JSON: paste the content of key.json
 
 6️⃣ Run the pipeline
+
 Enable DAG: weather_pipeline
+
 Click Trigger DAG
 
 🔄 Pipeline Description
+
 1. Extract & Load
+
 Calls weather API
+
 Inserts data into raw_weather
+
 Supports multiple cities:
+
 Mexico City
 Guadalajara
 Monterrey
@@ -134,7 +151,9 @@ Monterrey
 
 📊 Visualization (Looker Studio)
 Connect to BigQuery
+
 Select table: clean_weather
+
 Recommended chart:
 Dimension: fecha
 Metric: temp_promedio
