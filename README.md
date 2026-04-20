@@ -155,11 +155,11 @@ Connect to BigQuery
 Select table: clean_weather
 
 Recommended chart:
-Dimension: fecha
-Metric: temp_promedio
+Dimension: date
+Metric: temp_average
 Breakdown: city
 
-fecha       | city        | temp_promedio
+date       | city        | temp_average
 ----------------------------------------
 2026-04-20  | CDMX        | 22.1
 2026-04-20  | Guadalajara | 24.3
@@ -167,4 +167,5 @@ fecha       | city        | temp_promedio
 ⚠️ Notes
 Service Account is created manually (IAM permissions)
 key.json must NOT be uploaded to GitHub
+
 Use .env for reproducibility
