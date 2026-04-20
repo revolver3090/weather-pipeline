@@ -11,7 +11,9 @@ This project implements an end-to-end data pipeline that:
 - Visualizes results in Looker Studio
 - Manages infrastructure using Terraform
 
----
+#
+
+![Structure](structure.png)
 
 ## ❓ Problem Statement
 
@@ -169,3 +171,7 @@ Service Account is created manually (IAM permissions)
 key.json must NOT be uploaded to GitHub
 
 Use .env for reproducibility
+
+## 📊 Dashboard
+
+![Weather Dashboard](dashboard.png)
