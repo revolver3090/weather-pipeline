@@ -1,0 +1,18 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+
+# Secrets
+key.json
+keys/
+
+# Python
+__pycache__/
+*.pyc
+
+# Airflow
+logs/
+
+# Env
+.env
